@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../assets/css/style.css">
+        <title>page</title>
+</head>
+<body>
+
+    <a href="/addData" ><button class="btn">Add Book</button></a>
+
+
+
+        <div class="container">
+            <% bookData.map((val , i)=>{%>
+
+
+                <div class="card">
+                    <div class="image_box">
+                        <img src="/uploads/<%=val.bookImage%>" alt="<%=val.bookImage%>(<%= i%>)">
+                    </div>
+                    <div class="detailse_box">
+                        <h2><strong>Book</strong> : <%=val.bookName%></h2>
+                        <strong>Auther Name : <%=val.autherName%></strong>
+                        <p><strong>Shrot Discreption</strong> : <%=val.discreption%></p>
+                        <p><strong>Price</strong> : <%=val.price%></p>
+                        <div class="button_box">
+                            <a href="/editData"><button class="btn">Edit</button></a>
+                        <a href="/deleteData"><button class="btn2">Delete</button></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <%})%>
+
+
+        </div>
+
+    
+</body>
+</html>
