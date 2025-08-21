@@ -17,7 +17,7 @@
 }
 .card{
     width: 280px;
-    height: 350px;
+    /* height: 350px; */
     background-color: white;
     overflow: hidden;
     border-radius: 7px;

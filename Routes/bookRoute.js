@@ -23,4 +23,9 @@ const upload = multer({storage : fillStore}).single('bookImage')
 router.get('/' , bookController.home);
 router.get('/addData', bookController.addData);
 router.post('/addbook' , upload , bookController.addbook);
+router.get('/editData/:id' , bookController.editData)
+router.post('/editBook/:id',upload , bookController.editBook)
+router.get('/deleteData/:id' , bookController.deleteData)
+
+
 module.exports = router
